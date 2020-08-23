@@ -66,7 +66,7 @@ function setup()
   polygon = Bodies.circle(100,200,20);
   World.add(world,polygon)
 
-  slingshot = new SlingShot(this.polygon,{x:100,y:200});
+  slingshot = new SlingShot(polygon,{x:100,y:200});
 }
 
 function draw() {
@@ -127,7 +127,7 @@ function draw() {
 
 function mouseDragged()
 {
-  Matter.Body.setPosition(polygon.body,{x:mouseX,y:mouseY})
+  Matter.Body.setPosition(polygon,{x:mouseX,y:mouseY})
 }
 
 function mouseReleased()
